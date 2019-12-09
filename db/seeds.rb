@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+puts 'Cleaning database...'
+Sport.destroy_all
+
+puts 'Creating sport types...'
+sports_attributes = [
+  {
+    type:         'soccer',
+  },
+  {
+    type:         'basketball',
+  }
+]
+Sport.create!(sports_attributes)
+puts 'Finished!'

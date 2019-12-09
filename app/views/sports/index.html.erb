@@ -1,0 +1,5 @@
+<% @sports.each do |sport| %>
+  <h2><%= sport.type %> - <%= link_to "Delete", sports_path,
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></h2>
+<% end %>
